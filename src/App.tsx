@@ -1,7 +1,11 @@
-import "./App.css";
+import Button from "react-bootstrap/Button";
 
 function App() {
-    return <>Finance</>;
+    return (
+        <>
+            <Button>Test</Button>
+        </>
+    );
 }
 
 export default App;
