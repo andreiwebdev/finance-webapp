@@ -1,9 +1,10 @@
 import Button from "react-bootstrap/Button";
+import "./assets/sass/style.scss";
 
 function App() {
     return (
         <>
-            <Button>Test</Button>
+            <Button className="hello">Test</Button>
         </>
     );
 }
