@@ -1,11 +1,12 @@
-import { Container } from "react-bootstrap";
 import "./assets/sass/style.scss";
+import Navbar from "./components/common/Navbar";
 
 function App() {
     return (
-        <Container>
-            <h1>Finance</h1>
-        </Container>
+        <>
+            <Navbar />
+            <div className="container-fluid container-md"></div>
+        </>
     );
 }
 
