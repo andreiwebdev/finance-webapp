@@ -1,11 +1,11 @@
-import Button from "react-bootstrap/Button";
+import { Container } from "react-bootstrap";
 import "./assets/sass/style.scss";
 
 function App() {
     return (
-        <>
-            <Button className="hello">Test</Button>
-        </>
+        <Container>
+            <h1>Finance</h1>
+        </Container>
     );
 }
 
