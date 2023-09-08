@@ -231,6 +231,7 @@
 }
 
 .card-projects {
+    overflow-x: auto;
     background: linear-gradient(
         127deg,
         rgba(6, 11, 40, 0.74) 28.26%,
@@ -241,6 +242,34 @@
         font-size: 14px;
         svg {
             margin-right: 6px;
+        }
+    }
+}
+
+.card-orders {
+    p {
+        color: $col-gray;
+        margin-bottom: 32px;
+        svg {
+            margin-right: 6px;
+        }
+    }
+    .overview-row {
+        display: flex;
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        img {
+            margin-right: 19px;
+        }
+        h4 {
+            font-size: 14px;
+            color: $col-white;
+        }
+        h5 {
+            color: $col-gray;
+            font-size: 12px;
         }
     }
 }
@@ -258,7 +287,8 @@
     }
 }
 @media screen and (min-width: $bp-lg) {
-    .card-sales-chart {
+    .card-sales-chart,
+    .card-projects {
         height: 100%;
     }
 }

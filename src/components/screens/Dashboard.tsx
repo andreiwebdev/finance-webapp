@@ -14,7 +14,12 @@ import Col from "react-bootstrap/Col";
 
 // icons
 import { IoMdWallet } from "react-icons/io";
-import { BsGlobe, BsFillCartFill, BsCheckCircleFill } from "react-icons/bs";
+import {
+    BsGlobe,
+    BsFillCartFill,
+    BsCheckCircleFill,
+    BsBellFill,
+} from "react-icons/bs";
 import { PiUsersFourFill } from "react-icons/pi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaRegSmileBeam } from "react-icons/fa";
@@ -35,6 +40,12 @@ import Member5 from "../../assets/images/members/member-5.png";
 
 // components
 import TopPart from "../common/TopPart";
+
+// orders overview icons
+import BellIcon from "../../assets/images/orders/bell.svg";
+import CardIcon from "../../assets/images/orders/card.svg";
+import CartIcon from "../../assets/images/orders/cart.svg";
+import CssIcon from "../../assets/images/orders/css.svg";
 
 const Dashboard = () => {
     return (
@@ -219,7 +230,7 @@ const Dashboard = () => {
             </Row>
             {/* Tables Overview */}
             <Row>
-                <Col xs={12} lg={8}>
+                <Col className="mb-3 mb-lg-0" xs={12} lg={8}>
                     <div className="card card-projects">
                         <h3>Projects</h3>
                         <p>
@@ -303,6 +314,65 @@ const Dashboard = () => {
                                 <td className="fw-bold">100%</td>
                             </tr>
                         </table>
+                    </div>
+                </Col>
+                <Col xs={12} lg={4}>
+                    <div className="card card-orders">
+                        <h3>Orders overview</h3>
+                        <p>
+                            <span className="green">
+                                <BsCheckCircleFill />
+                            </span>{" "}
+                            +30% done this month
+                        </p>
+                        <div className="overview-row">
+                            <div className="icon">
+                                <img src={BellIcon} alt="" />
+                            </div>
+                            <div>
+                                <div className="mb-3">
+                                    <h4>$2400, Design changes</h4>
+                                    <h5>22 DEC 7:20 PM</h5>
+                                </div>
+                                <div>
+                                    <h4>Unlock packages for Development</h4>
+                                    <h5>22 DEC 7:20 PM</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="overview-row">
+                            <div className="icon">
+                                <img src={CardIcon} alt="" />
+                            </div>
+                            <div>
+                                <div>
+                                    <h4>New order #25152151</h4>
+                                    <h5>19 DEC 6:20 PM</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="overview-row">
+                            <div className="icon">
+                                <img src={CartIcon} alt="" />
+                            </div>
+                            <div>
+                                <div>
+                                    <h4>Server Payments for April</h4>
+                                    <h5>22 DEC 7:20 PM</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="overview-row">
+                            <div className="icon">
+                                <img src={CssIcon} alt="" />
+                            </div>
+                            <div>
+                                <div>
+                                    <h4>Design changes</h4>
+                                    <h5>22 DEC 7:20 PM</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </Col>
             </Row>
