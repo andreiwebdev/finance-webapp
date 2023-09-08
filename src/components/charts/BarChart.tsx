@@ -47,7 +47,7 @@ const data = {
         {
             data: [300, 200, 500, 400, 300, 200, 500],
             borderColor: "#FFF",
-            backgroundColor: "#fff",
+            backgroundColor: "#05CD99",
         },
     ],
 };

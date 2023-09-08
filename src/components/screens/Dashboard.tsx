@@ -14,12 +14,7 @@ import Col from "react-bootstrap/Col";
 
 // icons
 import { IoMdWallet } from "react-icons/io";
-import {
-    BsGlobe,
-    BsFillCartFill,
-    BsCheckCircleFill,
-    BsBellFill,
-} from "react-icons/bs";
+import { BsGlobe, BsFillCartFill, BsCheckCircleFill } from "react-icons/bs";
 import { PiUsersFourFill } from "react-icons/pi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaRegSmileBeam } from "react-icons/fa";
