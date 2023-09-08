@@ -14,6 +14,8 @@ import {
     CircularProgressbarWithChildren,
     buildStyles,
 } from "react-circular-progressbar";
+import LineChart from "./components/charts/LineChart";
+import BarChart from "./components/charts/BarChart";
 
 function App() {
     return (
@@ -164,6 +166,30 @@ function App() {
                                     </CircularProgressbarWithChildren>
                                 </Col>
                             </Row>
+                        </div>
+                    </Col>
+                </Row>
+                {/* Graphs */}
+                <Row>
+                    <Col className="mb-3" xs={12}>
+                        <div className="card card-sales-chart">
+                            <h3>Sales overview</h3>
+                            <p>
+                                <span className="green">(+5) more</span> in 2021
+                            </p>
+                            <LineChart />
+                        </div>
+                    </Col>
+                    <Col className="mb-3" xs={12}>
+                        <div className="card card-active-users">
+                            <div className="chart-ctn">
+                                <BarChart />
+                            </div>
+                            <h3>Active Users</h3>
+                            <p>
+                                <span className="green">(+23)</span> than last
+                                week
+                            </p>
                         </div>
                     </Col>
                 </Row>
