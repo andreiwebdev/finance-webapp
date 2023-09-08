@@ -19,7 +19,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="navbar-mobile">
+            <div className="navbar-mobile d-xl-none">
                 <Container className="d-flex align-items-center justify-content-between">
                     <h1>FINANCE WEBAPP</h1>
                     <span onClick={toggleNavbar}>

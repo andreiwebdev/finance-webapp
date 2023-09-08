@@ -236,3 +236,14 @@
 .green {
     color: $col-green;
 }
+
+@media screen and (min-width: $bp-md) {
+    .card-welcome {
+        height: 100%;
+    }
+}
+@media screen and (min-width: $bp-lg) {
+    .card-sales-chart {
+        height: 100%;
+    }
+}
