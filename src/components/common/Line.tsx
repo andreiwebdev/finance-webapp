@@ -18,12 +18,12 @@ const Line = () => {
                     y2="0.5"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#E0E1E2" stop-opacity="0" />
-                    <stop offset="0.5" stop-color="#E0E1E2" />
+                    <stop stopColor="#E0E1E2" stopOpacity="0" />
+                    <stop offset="0.5" stopColor="#E0E1E2" />
                     <stop
                         offset="1"
-                        stop-color="#E0E1E2"
-                        stop-opacity="0.15625"
+                        stopColor="#E0E1E2"
+                        stopOpacity="0.15625"
                     />
                 </linearGradient>
             </defs>

@@ -7,12 +7,19 @@ import { IoMdWallet } from "react-icons/io";
 import { BsGlobe, BsFillCartFill } from "react-icons/bs";
 import { PiUsersFourFill } from "react-icons/pi";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { FaRegSmileBeam } from "react-icons/fa";
+
+import {
+    CircularProgressbarWithChildren,
+    buildStyles,
+} from "react-circular-progressbar";
 
 function App() {
     return (
         <>
             <Navbar />
             <div className="container-fluid container-md">
+                {/* Analytics Cards */}
                 <Row>
                     <Col xs={12} className="mb-3">
                         <div className="card card--1">
@@ -67,8 +74,9 @@ function App() {
                         </div>
                     </Col>
                 </Row>
+                {/* Other Cards */}
                 <Row>
-                    <Col xs={12}>
+                    <Col className="mb-3" xs={12}>
                         <div className="card card-welcome">
                             <div>
                                 <h4>Welcome back,</h4>
@@ -81,6 +89,39 @@ function App() {
                             <button className="btn btn--2">
                                 Tap to record <AiOutlineArrowRight />
                             </button>
+                        </div>
+                    </Col>
+                    <Col className="mb-3" xs={12}>
+                        <div className="card card-satisfaction-rate">
+                            <h3>Satisfaction Rate</h3>
+                            <h4>From all projects</h4>
+                            <div className="progress-ctn">
+                                <CircularProgressbarWithChildren
+                                    className="progressbar"
+                                    value={66}
+                                    styles={buildStyles({
+                                        rotation: 0.6,
+                                        strokeLinecap: "round",
+                                        textSize: "16px",
+                                        pathTransitionDuration: 0.5,
+                                        pathColor: "#0075FF",
+                                        textColor: "#fff",
+                                        trailColor: "#22234B",
+                                    })}
+                                >
+                                    <div className="icon-box">
+                                        <FaRegSmileBeam />
+                                    </div>
+                                    <div className="percentage-box">
+                                        <span className="left">0%</span>
+                                        <span className="right">100%</span>
+                                        <div className="center">
+                                            <h3>95%</h3>
+                                            <h4>Based on likes</h4>
+                                        </div>
+                                    </div>
+                                </CircularProgressbarWithChildren>
+                            </div>
                         </div>
                     </Col>
                 </Row>
