@@ -13,12 +13,3 @@ body {
     font-family: $ff-primary;
     min-height: 100vh;
 }
-
-@media screen and (min-width: $bp-xxl) {
-    body {
-        overflow: hidden;
-    }
-    .dashboard {
-        overflow-y: auto;
-    }
-}

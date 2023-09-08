@@ -1,0 +1,54 @@
+.table {
+    &--1 {
+        color: $col-white;
+        th {
+            color: $col-gray;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+        tr {
+            border-bottom: 1px solid #56577a;
+            &:last-child {
+                border-bottom: 0px;
+            }
+        }
+        th,
+        td {
+            padding: 12px 0px;
+        }
+        td {
+            font-size: 14px;
+        }
+        img {
+            background: transparent;
+            width: 20px;
+            padding: 0px;
+        }
+        span {
+            background: transparent;
+            color: $col-white;
+        }
+        .members {
+            img {
+                border-radius: 100%;
+                border: 2px solid #121241;
+                &:nth-child(2) {
+                    position: relative;
+                    left: -7px;
+                }
+                &:nth-child(3) {
+                    position: relative;
+                    left: -14px;
+                }
+                &:nth-child(4) {
+                    position: relative;
+                    left: -21px;
+                }
+                &:nth-child(5) {
+                    position: relative;
+                    left: -28px;
+                }
+            }
+        }
+    }
+}

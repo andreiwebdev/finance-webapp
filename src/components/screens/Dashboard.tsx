@@ -14,11 +14,24 @@ import Col from "react-bootstrap/Col";
 
 // icons
 import { IoMdWallet } from "react-icons/io";
-import { BsGlobe, BsFillCartFill } from "react-icons/bs";
+import { BsGlobe, BsFillCartFill, BsCheckCircleFill } from "react-icons/bs";
 import { PiUsersFourFill } from "react-icons/pi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaRegSmileBeam } from "react-icons/fa";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
+
+// images
+import AdobeXDLogo from "../../assets/images/companies-logos/xd.png";
+import SpotifyLogo from "../../assets/images/companies-logos/spotify.png";
+import SlackLogo from "../../assets/images/companies-logos/slack.png";
+import AmzonLogo from "../../assets/images/companies-logos/logo.png";
+import FbLogo from "../../assets/images/companies-logos/facebook.png";
+
+import Member1 from "../../assets/images/members/member.png";
+import Member2 from "../../assets/images/members/member-2.png";
+import Member3 from "../../assets/images/members/member-3.png";
+import Member4 from "../../assets/images/members/member-4.png";
+import Member5 from "../../assets/images/members/member-5.png";
 
 // components
 import TopPart from "../common/TopPart";
@@ -201,6 +214,95 @@ const Dashboard = () => {
                         <p>
                             <span className="green">(+23)</span> than last week
                         </p>
+                    </div>
+                </Col>
+            </Row>
+            {/* Tables Overview */}
+            <Row>
+                <Col xs={12} lg={8}>
+                    <div className="card card-projects">
+                        <h3>Projects</h3>
+                        <p>
+                            <span className="green">
+                                <BsCheckCircleFill />
+                            </span>{" "}
+                            30 done this month
+                        </p>
+                        <table className="table table--1">
+                            <tr>
+                                <th>Companies</th>
+                                <th>Members</th>
+                                <th>Budget</th>
+                                <th>Complete</th>
+                            </tr>
+                            <tr>
+                                <td className="company">
+                                    <img src={AdobeXDLogo} alt="adobexd" />
+                                    <span>Chakra Soft UI Version</span>
+                                </td>
+                                <td className="members">
+                                    <img src={Member1} alt="member" />
+                                    <img src={Member2} alt="member" />
+                                    <img src={Member3} alt="member" />
+                                    <img src={Member4} alt="member" />
+                                    <img src={Member5} alt="member" />
+                                </td>
+                                <td className="fw-bold">$14,000</td>
+                                <td className="fw-bold">60%</td>
+                            </tr>
+                            <tr>
+                                <td className="company">
+                                    <img src={SpotifyLogo} alt="adobexd" />
+                                    <span>Fix Platform Errors</span>
+                                </td>
+                                <td className="members">
+                                    <img src={Member1} alt="member" />
+                                    <img src={Member5} alt="member" />
+                                </td>
+                                <td className="fw-bold">$25,000</td>
+                                <td className="fw-bold">80%</td>
+                            </tr>
+                            <tr>
+                                <td className="company">
+                                    <img src={SlackLogo} alt="adobexd" />
+                                    <span>Chakra Soft UI Version</span>
+                                </td>
+                                <td className="members">
+                                    <img src={Member3} alt="member" />
+                                    <img src={Member4} alt="member" />
+                                    <img src={Member5} alt="member" />
+                                </td>
+                                <td className="fw-bold">$4,000</td>
+                                <td className="fw-bold">90%</td>
+                            </tr>
+                            <tr>
+                                <td className="company">
+                                    <img src={FbLogo} alt="adobexd" />
+                                    <span>Chakra Soft UI Version</span>
+                                </td>
+                                <td className="members">
+                                    <img src={Member5} alt="member" />
+                                    <img src={Member1} alt="member" />
+                                    <img src={Member2} alt="member" />
+                                </td>
+                                <td className="fw-bold">$7,000</td>
+                                <td className="fw-bold">0%</td>
+                            </tr>
+                            <tr>
+                                <td className="company">
+                                    <img src={AmzonLogo} alt="adobexd" />
+                                    <span>Chakra Soft UI Version</span>
+                                </td>
+                                <td className="members">
+                                    <img src={Member1} alt="member" />
+                                    <img src={Member2} alt="member" />
+                                    <img src={Member4} alt="member" />
+                                    <img src={Member5} alt="member" />
+                                </td>
+                                <td className="fw-bold">$200,000</td>
+                                <td className="fw-bold">100%</td>
+                            </tr>
+                        </table>
                     </div>
                 </Col>
             </Row>

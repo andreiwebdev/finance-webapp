@@ -230,6 +230,21 @@
     }
 }
 
+.card-projects {
+    background: linear-gradient(
+        127deg,
+        rgba(6, 11, 40, 0.74) 28.26%,
+        rgba(10, 14, 35, 0.71) 91.2%
+    );
+    p {
+        color: $col-gray;
+        font-size: 14px;
+        svg {
+            margin-right: 6px;
+        }
+    }
+}
+
 .red {
     color: $col-red;
 }
