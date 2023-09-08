@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import { IoMdWallet } from "react-icons/io";
 import { BsGlobe, BsFillCartFill } from "react-icons/bs";
 import { PiUsersFourFill } from "react-icons/pi";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 function App() {
     return (
@@ -63,6 +64,23 @@ function App() {
                             <div className="icon-box">
                                 <BsFillCartFill />
                             </div>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={12}>
+                        <div className="card card-welcome">
+                            <div>
+                                <h4>Welcome back,</h4>
+                                <h3>Andrei Dragomir</h3>
+                                <p>
+                                    Glad to see you again! <br /> Ask me
+                                    anything.
+                                </p>
+                            </div>
+                            <button className="btn btn--2">
+                                Tap to record <AiOutlineArrowRight />
+                            </button>
                         </div>
                     </Col>
                 </Row>

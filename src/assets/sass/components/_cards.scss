@@ -41,3 +41,25 @@
         }
     }
 }
+
+.card-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 344px;
+    background-image: url(../images/bg-image-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    h4 {
+        color: $col-gray;
+        font-size: 14px;
+    }
+    h3 {
+        color: $col-white;
+        font-size: 28px;
+    }
+    p {
+        color: $col-gray;
+    }
+}
