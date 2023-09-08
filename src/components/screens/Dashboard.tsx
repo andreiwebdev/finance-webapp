@@ -20,9 +20,13 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaRegSmileBeam } from "react-icons/fa";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 
+// components
+import TopPart from "../common/TopPart";
+
 const Dashboard = () => {
     return (
         <Col className="dashboard" xs={12} xxl={9}>
+            <TopPart />
             {/* Analytics Cards */}
             <Row>
                 <Col xs={12} sm={6} xxl={3} className="mb-3">
