@@ -8,6 +8,7 @@ import { BsGlobe, BsFillCartFill } from "react-icons/bs";
 import { PiUsersFourFill } from "react-icons/pi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaRegSmileBeam } from "react-icons/fa";
+import { BiDotsHorizontalRounded } from "react-icons/bi";
 
 import {
     CircularProgressbarWithChildren,
@@ -122,6 +123,47 @@ function App() {
                                     </div>
                                 </CircularProgressbarWithChildren>
                             </div>
+                        </div>
+                    </Col>
+                    <Col className="mb-3" xs={12}>
+                        <div className="card card-referral-tracking">
+                            <div className="icon-box">
+                                <BiDotsHorizontalRounded />
+                            </div>
+                            <h3>Referral Tracking</h3>
+                            <Row>
+                                <Col xs={12}>
+                                    <div className="box">
+                                        <h4>Invited</h4>
+                                        <h3>145 people</h3>
+                                    </div>
+                                    <div className="box">
+                                        <h4>Bonus</h4>
+                                        <h3>1,465</h3>
+                                    </div>
+                                </Col>
+                                <Col xs={12}>
+                                    <CircularProgressbarWithChildren
+                                        className="progressbar"
+                                        value={66}
+                                        styles={buildStyles({
+                                            rotation: 0.6,
+                                            strokeLinecap: "round",
+                                            textSize: "16px",
+                                            pathTransitionDuration: 0.5,
+                                            pathColor: "#05CD99",
+                                            textColor: "#fff",
+                                            trailColor: "#22234B",
+                                        })}
+                                    >
+                                        <div className="progress-bar">
+                                            <h4>Safety</h4>
+                                            <h2>9.3</h2>
+                                            <h4>Total Score</h4>
+                                        </div>
+                                    </CircularProgressbarWithChildren>
+                                </Col>
+                            </Row>
                         </div>
                     </Col>
                 </Row>
