@@ -302,3 +302,319 @@
 .green {
     color: $col-green;
 }
+
+.virtual-card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: $col-white;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    svg {
+        position: absolute;
+        right: 28px;
+        top: 28px;
+    }
+    .card-details {
+        display: flex;
+        div:first-child {
+            margin-right: 34px;
+        }
+    }
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    h4 {
+        margin-bottom: 0px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    h5 {
+        margin-bottom: 0px;
+        font-size: 10px;
+    }
+}
+
+.card-balance {
+    background: linear-gradient(
+        127deg,
+        rgba(6, 11, 40, 0.94) 19.41%,
+        rgba(10, 14, 35, 0.49) 76.65%
+    );
+    backdrop-filter: blur(60px);
+    .balance {
+        background: #0d1a39;
+        padding: 28px 20px;
+        border-radius: 20px;
+        position: relative;
+        color: $col-white;
+        margin-bottom: 20px;
+        h3 {
+            font-size: 12px;
+        }
+        h2 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+        svg {
+            position: absolute;
+            font-size: 26px;
+            top: 18px;
+            right: 20px;
+            cursor: pointer;
+        }
+    }
+}
+.bill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+    .ctn {
+        display: flex;
+        align-items: center;
+        .icon-box {
+            @include icon-box(#1a325d, 0px, 45px, 45px);
+            border-radius: 100%;
+            margin-right: 11px;
+            svg {
+                color: $col-green;
+                font-size: 22px;
+            }
+        }
+    }
+    h4,
+    h5,
+    h3 {
+        font-size: 14px;
+    }
+    h4 {
+        color: $col-white;
+        margin-bottom: 2px;
+    }
+    h5 {
+        color: $col-gray;
+    }
+    h3,
+    h5 {
+        margin-bottom: 0px;
+    }
+}
+
+.label {
+    font-size: 10px;
+    color: $col-gray;
+    margin-bottom: 8px;
+}
+
+.pay-method {
+    background: linear-gradient(
+        127deg,
+        rgba(6, 11, 40, 0.94) 19.41%,
+        rgba(10, 14, 35, 0.49) 76.65%
+    );
+    color: $col-white;
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+        h2 {
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+    }
+    .inputs {
+        .input-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-bottom: 20px;
+            padding: 22px 26px;
+            border-radius: 20px;
+            border: 1px solid #ffffff45;
+            background: linear-gradient(
+                117deg,
+                rgba(255, 255, 255, 0) -3.91%,
+                rgba(255, 255, 255, 0.04) 75.27%
+            );
+            backdrop-filter: blur(21px);
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            div {
+                display: flex;
+                align-items: center;
+                svg {
+                    margin-right: 15px;
+                }
+            }
+            h3 {
+                margin-bottom: 0px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.billing-info {
+    background: linear-gradient(
+        127deg,
+        rgba(6, 11, 40, 0.94) 19.41%,
+        rgba(10, 14, 35, 0.49) 76.65%
+    );
+    color: $col-white;
+    h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    p {
+        margin-bottom: 0px;
+        color: $col-gray;
+        font-size: 12px;
+    }
+    button {
+        font-size: 12px;
+        svg {
+            margin-right: 3px;
+        }
+        &:last-child {
+            padding-right: 0px;
+        }
+    }
+    .bill-card {
+        border-radius: 20px;
+        background: linear-gradient(
+            127deg,
+            rgba(24, 29, 60, 0.94) 19.41%,
+            rgba(10, 14, 35, 0.49) 76.65%
+        );
+        backdrop-filter: blur(60px);
+        padding: 26px;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.invoices-card {
+    background: linear-gradient(
+        127deg,
+        rgba(6, 11, 40, 0.94) 19.41%,
+        rgba(10, 14, 35, 0.49) 76.65%
+    );
+    backdrop-filter: blur(60px);
+    color: $col-white;
+    h2 {
+        margin-bottom: 0px;
+        font-size: 18px;
+    }
+    .invoice {
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        h3 {
+            font-size: 14px;
+        }
+        p {
+            color: $col-gray;
+            font-size: 12px;
+            margin-right: 10px;
+            margin-bottom: 0px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            svg {
+                color: $col-white;
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+.transactions-card {
+    border-radius: 20px;
+    background: linear-gradient(
+        127deg,
+        rgba(6, 11, 40, 0.94) 19.41%,
+        rgba(10, 14, 35, 0.49) 76.65%
+    );
+    backdrop-filter: blur(60px);
+    .label {
+        margin-bottom: 20px;
+    }
+    h2,
+    p {
+        margin-bottom: 0px;
+    }
+    h2 {
+        color: $col-white;
+        font-size: 18px;
+    }
+    p {
+        color: $col-gray;
+        svg {
+            margin-right: 6px;
+        }
+    }
+    .bill {
+        .icon-box {
+            @include icon-box(transparent, 0px, 35px, 35px);
+            border-radius: 100%;
+            margin-right: 14px;
+
+            svg {
+                font-size: 12px;
+            }
+            &.green {
+                border: 1px solid $col-green;
+                svg {
+                    color: $col-green;
+                }
+            }
+            &.red {
+                border: 1px solid $col-red;
+                svg {
+                    color: $col-red;
+                }
+            }
+            &.gray {
+                border: 1px solid $col-gray;
+                svg {
+                    color: $col-gray;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $bp-md) {
+    .pay-method {
+        .inputs {
+            display: flex;
+            .input-card {
+                margin-bottom: 0px;
+                width: 100%;
+                &:first-child {
+                    margin-right: 28px;
+                }
+            }
+        }
+    }
+}

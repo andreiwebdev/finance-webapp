@@ -11,6 +11,7 @@ import Dashboard from "./components/screens/Dashboard";
 // components
 import Navbar from "./components/common/Navbar";
 import Tables from "./components/screens/Tables";
+import Billing from "./components/screens/Billing";
 
 function App() {
     const [currentScreen, setCurrentScreen] = useState("Dashboard");
@@ -23,7 +24,7 @@ function App() {
         <>
             <div className="container-fluid py-xl-3">
                 <Row>
-                    <Col xxl={3}>
+                    <Col xxl={2}>
                         <Navbar
                             currentScreen={currentScreen}
                             setCurrentScreen={changeAppScreen}
@@ -31,6 +32,7 @@ function App() {
                     </Col>
                     {currentScreen === "Dashboard" && <Dashboard />}
                     {currentScreen === "Tables" && <Tables />}
+                    {currentScreen === "Billing" && <Billing />}
                 </Row>
             </div>
         </>

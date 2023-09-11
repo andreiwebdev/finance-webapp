@@ -85,7 +85,7 @@ const Tables = () => {
     ];
 
     return (
-        <Col className="tables" xs={12} xxl={9}>
+        <Col className="tables" xs={12} xxl={10}>
             <TopPart screenName="Tables" />
             <div className="card card-table mb-3 mb-md-4">
                 <h3>Authors Table</h3>

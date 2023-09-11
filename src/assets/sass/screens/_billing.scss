@@ -1,0 +1,15 @@
+@media screen and (min-width: $bp-md) {
+    .billing {
+        .virtual-card {
+            height: 100%;
+        }
+    }
+}
+@media screen and (min-width: $bp-xxl) {
+    .billing {
+        .invoices-card,
+        .transactions-card {
+            height: 100%;
+        }
+    }
+}

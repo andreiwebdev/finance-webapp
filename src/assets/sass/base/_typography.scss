@@ -49,11 +49,29 @@ h1 {
             color: $col-white;
         }
     }
+    &--3 {
+        background: $col-icon-box;
+        color: $col-white;
+        font-size: 10px;
+        font-weight: 700;
+        border-radius: 12px;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        &:hover {
+            background: $col-icon-box;
+        }
+    }
 }
 
 .c {
     &--gray {
-        color: #a0aec0;
+        color: #a0aec0 !important;
+    }
+    &--red {
+        color: #f53c2b !important;
+    }
+    &--green {
+        color: #01b574 !important;
     }
 }
 
