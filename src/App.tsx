@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./assets/sass/style.scss";
 
 // bootstrap
@@ -11,14 +12,23 @@ import Dashboard from "./components/screens/Dashboard";
 import Navbar from "./components/common/Navbar";
 
 function App() {
+    const [currentScreen, setCurrentScreen] = useState("Dashboard");
+
+    const changeAppScreen = (screen: string) => {
+        setCurrentScreen(screen);
+    };
+
     return (
         <>
             <div className="container-fluid py-xl-3">
                 <Row>
                     <Col xxl={3}>
-                        <Navbar />
+                        <Navbar
+                            currentScreen={currentScreen}
+                            setCurrentScreen={changeAppScreen}
+                        />
                     </Col>
-                    <Dashboard />
+                    {currentScreen === "Dashboard" && <Dashboard />}
                 </Row>
             </div>
         </>

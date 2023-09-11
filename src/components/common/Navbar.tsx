@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Line from "./Line";
 
@@ -8,17 +9,81 @@ import { BsGraphUpArrow, BsFillRocketTakeoffFill } from "react-icons/bs";
 import { HiMiniWrenchScrewdriver } from "react-icons/hi2";
 import { FaUserAlt } from "react-icons/fa";
 import { BiSolidKey, BiSolidHelpCircle } from "react-icons/bi";
-import { useState } from "react";
 
-const Navbar = () => {
+type Props = {
+    currentScreen: string;
+    setCurrentScreen: Function;
+};
+
+const Navbar = (props: Props) => {
     const [isOpen, setIsOpen] = useState(false);
+    const navRef = useRef<HTMLDivElement | null>(null);
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                navRef.current &&
+                !navRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+            window.scrollTo(0, 0);
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [isOpen]);
+
+    const menuItems = [
+        {
+            name: "Dashboard",
+            icon: <AiFillHome />,
+        },
+        {
+            name: "Tables",
+            icon: <BsGraphUpArrow />,
+        },
+        {
+            name: "Billing",
+            icon: <AiFillCreditCard />,
+        },
+        {
+            name: "RTL",
+            icon: <HiMiniWrenchScrewdriver />,
+        },
+        {
+            name: "Profile",
+            icon: <FaUserAlt />,
+        },
+        {
+            name: "Sign In",
+            icon: <BiSolidKey />,
+        },
+        {
+            name: "Sign Up",
+            icon: <BsFillRocketTakeoffFill />,
+        },
+    ];
+
     return (
-        <>
+        <div ref={navRef}>
             <div className="navbar-mobile d-xxl-none">
                 <Container className="d-flex align-items-center justify-content-between">
                     <h1>FINANCE WEBAPP</h1>
@@ -35,48 +100,23 @@ const Navbar = () => {
                             <Line />
                         </div>
                         <div className="menu">
-                            <div className="menu-item active">
-                                <div className="icon-box">
-                                    <AiFillHome />
+                            {menuItems.map((menuItem) => (
+                                <div
+                                    onClick={() =>
+                                        props.setCurrentScreen(menuItem.name)
+                                    }
+                                    className={
+                                        props.currentScreen == menuItem.name
+                                            ? "menu-item active"
+                                            : "menu-item"
+                                    }
+                                >
+                                    <div className="icon-box">
+                                        {menuItem.icon}
+                                    </div>
+                                    <h3>{menuItem.name}</h3>
                                 </div>
-                                <h3>Dashboard</h3>
-                            </div>
-                            <div className="menu-item">
-                                <div className="icon-box">
-                                    <BsGraphUpArrow />
-                                </div>
-                                <h3>Tables</h3>
-                            </div>
-                            <div className="menu-item">
-                                <div className="icon-box">
-                                    <AiFillCreditCard />
-                                </div>
-                                <h3>Billing</h3>
-                            </div>
-                            <div className="menu-item">
-                                <div className="icon-box">
-                                    <HiMiniWrenchScrewdriver />
-                                </div>
-                                <h3>RTL</h3>
-                            </div>
-                            <div className="menu-item">
-                                <div className="icon-box">
-                                    <FaUserAlt />
-                                </div>
-                                <h3>Profile</h3>
-                            </div>
-                            <div className="menu-item">
-                                <div className="icon-box">
-                                    <BiSolidKey />
-                                </div>
-                                <h3>Sign In</h3>
-                            </div>
-                            <div className="menu-item">
-                                <div className="icon-box">
-                                    <BsFillRocketTakeoffFill />
-                                </div>
-                                <h3>Sign Up</h3>
-                            </div>
+                            ))}
                         </div>
                     </div>
                     <div className="help-box">
@@ -89,7 +129,7 @@ const Navbar = () => {
                     </div>
                 </Container>
             </nav>
-        </>
+        </div>
     );
 };
 
