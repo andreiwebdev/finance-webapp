@@ -10,6 +10,7 @@ import Dashboard from "./components/screens/Dashboard";
 
 // components
 import Navbar from "./components/common/Navbar";
+import Tables from "./components/screens/Tables";
 
 function App() {
     const [currentScreen, setCurrentScreen] = useState("Dashboard");
@@ -29,6 +30,7 @@ function App() {
                         />
                     </Col>
                     {currentScreen === "Dashboard" && <Dashboard />}
+                    {currentScreen === "Tables" && <Tables />}
                 </Row>
             </div>
         </>

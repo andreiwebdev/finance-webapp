@@ -50,3 +50,29 @@ h1 {
         }
     }
 }
+
+.c {
+    &--gray {
+        color: #a0aec0;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.status {
+    color: $col-white !important;
+    font-weight: 600;
+    max-width: 70px;
+    padding: 3px 11px;
+    text-align: center;
+    border-radius: 8px;
+    &.online {
+        background: #01b574;
+    }
+    &.offline {
+        background: transparent;
+        border: 1px solid $col-white;
+    }
+}

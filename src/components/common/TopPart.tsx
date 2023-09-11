@@ -1,10 +1,14 @@
 import { BiSearch, BiSolidUser } from "react-icons/bi";
 import { BsGearFill, BsFillBellFill } from "react-icons/bs";
 
-const TopPart = () => {
+type Props = {
+    screenName: string;
+};
+
+const TopPart = (props: Props) => {
     return (
         <div className="top-part-ctn d-none d-xxl-flex">
-            <h4>Dashboard</h4>
+            <h4>{props.screenName}</h4>
             <div className="d-flex align-items-center">
                 <form>
                     <button type="submit">

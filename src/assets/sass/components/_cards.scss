@@ -230,18 +230,39 @@
     }
 }
 
-.card-projects {
+.card-table {
     overflow-x: auto;
+    padding-bottom: 0px;
     background: linear-gradient(
         127deg,
         rgba(6, 11, 40, 0.74) 28.26%,
         rgba(10, 14, 35, 0.71) 91.2%
     );
     p {
+        background: transparent;
         color: $col-gray;
         font-size: 14px;
+        margin-bottom: 0px;
         svg {
             margin-right: 6px;
+        }
+    }
+    div {
+        background: transparent;
+    }
+    .author {
+        display: flex;
+        align-items: center;
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 14px;
+        }
+
+        p {
+            margin-bottom: 0px;
         }
     }
 }
@@ -280,16 +301,4 @@
 }
 .green {
     color: $col-green;
-}
-
-@media screen and (min-width: $bp-md) {
-    .card-welcome {
-        height: 100%;
-    }
-}
-@media screen and (min-width: $bp-lg) {
-    .card-sales-chart,
-    .card-projects {
-        height: 100%;
-    }
 }

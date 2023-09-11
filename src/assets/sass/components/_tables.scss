@@ -1,6 +1,6 @@
 .table {
     &--1 {
-        min-width: 500px;
+        min-width: 800px;
         width: 100%;
         color: $col-white;
         th {
@@ -51,6 +51,14 @@
                     left: -28px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: $bp-lg) {
+    .table {
+        &--1 {
+            min-width: fit-content;
         }
     }
 }

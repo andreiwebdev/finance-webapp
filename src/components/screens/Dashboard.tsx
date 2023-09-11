@@ -45,7 +45,7 @@ import CssIcon from "../../assets/images/orders/css.svg";
 const Dashboard = () => {
     return (
         <Col className="dashboard" xs={12} xxl={9}>
-            <TopPart />
+            <TopPart screenName="Dashboard" />
             {/* Analytics Cards */}
             <Row>
                 <Col xs={12} sm={6} xxl={3} className="mb-3">
@@ -226,7 +226,7 @@ const Dashboard = () => {
             {/* Tables Overview */}
             <Row>
                 <Col className="mb-3 mb-lg-0" xs={12} lg={8}>
-                    <div className="card card-projects">
+                    <div className="card card-table">
                         <h3>Projects</h3>
                         <p>
                             <span className="green">

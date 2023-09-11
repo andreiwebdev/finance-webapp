@@ -100,8 +100,9 @@ const Navbar = (props: Props) => {
                             <Line />
                         </div>
                         <div className="menu">
-                            {menuItems.map((menuItem) => (
+                            {menuItems.map((menuItem, key) => (
                                 <div
+                                    key={key}
                                     onClick={() =>
                                         props.setCurrentScreen(menuItem.name)
                                     }
