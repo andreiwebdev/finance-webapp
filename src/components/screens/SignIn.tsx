@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
 import SignScreen from "../common/SignScreen";
 import SwitchButton from "../common/SwitchButton";
 
-const SignIn = () => {
+type Props = {
+    changeAppScreen: Function;
+};
+
+const SignIn = (props: Props) => {
     return (
-        <SignScreen>
+        <SignScreen changeAppScreen={props.changeAppScreen}>
             <div className="card card-sign-in">
                 <div className="wrapper">
                     <h2>Nice to see you!</h2>
@@ -30,7 +35,8 @@ const SignIn = () => {
                         </button>
                     </form>
                     <p className="signup">
-                        Don't have an account? <a href="#">Sign Up</a>
+                        Don't have an account?{" "}
+                        <Link to="/sign-up">Sign Up</Link>
                     </p>
                 </div>
             </div>

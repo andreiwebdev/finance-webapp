@@ -1,20 +1,17 @@
 import { useState } from "react";
 import "./assets/sass/style.scss";
 
-// bootstrap
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
 // screens
 import Dashboard from "./components/screens/Dashboard";
-
-// components
-import Navbar from "./components/common/Navbar";
 import Tables from "./components/screens/Tables";
 import Billing from "./components/screens/Billing";
 import Profile from "./components/screens/Profile";
-// import SignIn from "./components/screens/SignIn";
-// import SignUp from "./components/screens/SignUp";
+import SignIn from "./components/screens/SignIn";
+import SignUp from "./components/screens/SignUp";
+
+// react router
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ScreenWrapper from "./components/common/ScreenWrapper";
 
 function App() {
     const [currentScreen, setCurrentScreen] = useState("Dashboard");
@@ -25,22 +22,66 @@ function App() {
 
     return (
         <>
-            <div className="container-fluid py-xl-3">
-                <Row>
-                    <Col xxl={2}>
-                        <Navbar
-                            currentScreen={currentScreen}
-                            setCurrentScreen={changeAppScreen}
-                        />
-                    </Col>
-                    {currentScreen === "Dashboard" && <Dashboard />}
-                    {currentScreen === "Tables" && <Tables />}
-                    {currentScreen === "Billing" && <Billing />}
-                    {currentScreen === "Profile" && <Profile />}
-                </Row>
-            </div>
-            {/* <SignIn />
-            <SignUp /> */}
+            <Router>
+                <Routes>
+                    <Route
+                        path="/"
+                        Component={() => (
+                            <ScreenWrapper
+                                currentScreen={currentScreen}
+                                changeAppScreen={changeAppScreen}
+                            >
+                                <Dashboard />
+                            </ScreenWrapper>
+                        )}
+                    />
+                    <Route
+                        path="/tables"
+                        Component={() => (
+                            <ScreenWrapper
+                                currentScreen={currentScreen}
+                                changeAppScreen={changeAppScreen}
+                            >
+                                <Tables />
+                            </ScreenWrapper>
+                        )}
+                    />
+                    <Route
+                        path="/billing"
+                        Component={() => (
+                            <ScreenWrapper
+                                currentScreen={currentScreen}
+                                changeAppScreen={changeAppScreen}
+                            >
+                                <Billing />
+                            </ScreenWrapper>
+                        )}
+                    />
+                    <Route
+                        path="/profile"
+                        Component={() => (
+                            <ScreenWrapper
+                                currentScreen={currentScreen}
+                                changeAppScreen={changeAppScreen}
+                            >
+                                <Profile />
+                            </ScreenWrapper>
+                        )}
+                    />
+                    <Route
+                        path="/sign-in"
+                        Component={() => (
+                            <SignIn changeAppScreen={changeAppScreen} />
+                        )}
+                    />
+                    <Route
+                        path="/sign-up"
+                        Component={() => (
+                            <SignUp changeAppScreen={changeAppScreen} />
+                        )}
+                    />
+                </Routes>
+            </Router>
         </>
     );
 }

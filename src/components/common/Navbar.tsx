@@ -8,6 +8,7 @@ import { AiFillHome, AiFillCreditCard } from "react-icons/ai";
 import { BsGraphUpArrow, BsFillRocketTakeoffFill } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
 import { BiSolidKey, BiSolidHelpCircle } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 type Props = {
     currentScreen: string;
@@ -52,26 +53,32 @@ const Navbar = (props: Props) => {
 
     const menuItems = [
         {
+            path: "/",
             name: "Dashboard",
             icon: <AiFillHome />,
         },
         {
+            path: "/tables",
             name: "Tables",
             icon: <BsGraphUpArrow />,
         },
         {
+            path: "/billing",
             name: "Billing",
             icon: <AiFillCreditCard />,
         },
         {
+            path: "/profile",
             name: "Profile",
             icon: <FaUserAlt />,
         },
         {
+            path: "/sign-in",
             name: "Sign In",
             icon: <BiSolidKey />,
         },
         {
+            path: "/sign-up",
             name: "Sign Up",
             icon: <BsFillRocketTakeoffFill />,
         },
@@ -96,7 +103,8 @@ const Navbar = (props: Props) => {
                         </div>
                         <div className="menu">
                             {menuItems.map((menuItem, key) => (
-                                <div
+                                <Link
+                                    to={menuItem.path}
                                     key={key}
                                     onClick={() =>
                                         props.setCurrentScreen(menuItem.name)
@@ -111,7 +119,7 @@ const Navbar = (props: Props) => {
                                         {menuItem.icon}
                                     </div>
                                     <h3>{menuItem.name}</h3>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

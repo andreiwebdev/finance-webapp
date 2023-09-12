@@ -1,10 +1,15 @@
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 import SignScreen from "../common/SignScreen";
 import SwitchButton from "../common/SwitchButton";
+import { Link } from "react-router-dom";
 
-const SignUp = () => {
+type Props = {
+    changeAppScreen: Function;
+};
+
+const SignUp = (props: Props) => {
     return (
-        <SignScreen>
+        <SignScreen changeAppScreen={props.changeAppScreen}>
             <div className="card card-sign-up">
                 <div className="text-wrapper">
                     <h2>Welcome!</h2>
@@ -56,7 +61,8 @@ const SignUp = () => {
                         </button>
                     </form>
                     <p className="signin">
-                        Already have an account? <a href="#">Sign In</a>
+                        Already have an account?{" "}
+                        <Link to="/sign-in">Sign In</Link>
                     </p>
                 </div>
             </div>

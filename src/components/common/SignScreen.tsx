@@ -1,14 +1,24 @@
 // bootstrap
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { FaAngleLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 type Props = {
     children: JSX.Element;
+    changeAppScreen: Function;
 };
 
 const SignScreen = (props: Props) => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid sign-screen">
+            <Link
+                to="/"
+                onClick={() => props.changeAppScreen("Dashboard")}
+                className="btn btn--3 btn-absolute"
+            >
+                <FaAngleLeft /> Go back to app
+            </Link>
             <Row>
                 <Col xs={12} md={6} className="p-0 order-md-2">
                     {props.children}

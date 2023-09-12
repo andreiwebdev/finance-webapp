@@ -23,3 +23,15 @@
     }
     padding: 16px;
 }
+
+.sign-screen {
+    position: relative;
+    .btn-absolute {
+        position: absolute;
+        top: 15px;
+        font-size: 14px;
+        &:hover {
+            color: $col-white;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { BiSearch, BiSolidUser } from "react-icons/bi";
 import { BsGearFill, BsFillBellFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 type Props = {
     screenName: string;
@@ -18,7 +19,9 @@ const TopPart = (props: Props) => {
                 </form>
                 <div className="sign-in">
                     <BiSolidUser />
-                    <h3>Sign In</h3>
+                    <Link to="/sign-in">
+                        <h3>Sign In</h3>
+                    </Link>
                 </div>
                 <div className="settings">
                     <BsGearFill />
