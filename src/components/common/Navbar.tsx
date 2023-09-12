@@ -6,7 +6,6 @@ import Line from "./Line";
 import { FiMenu } from "react-icons/fi";
 import { AiFillHome, AiFillCreditCard } from "react-icons/ai";
 import { BsGraphUpArrow, BsFillRocketTakeoffFill } from "react-icons/bs";
-import { HiMiniWrenchScrewdriver } from "react-icons/hi2";
 import { FaUserAlt } from "react-icons/fa";
 import { BiSolidKey, BiSolidHelpCircle } from "react-icons/bi";
 
@@ -63,10 +62,6 @@ const Navbar = (props: Props) => {
         {
             name: "Billing",
             icon: <AiFillCreditCard />,
-        },
-        {
-            name: "RTL",
-            icon: <HiMiniWrenchScrewdriver />,
         },
         {
             name: "Profile",

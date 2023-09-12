@@ -30,27 +30,27 @@
             background: transparent;
             color: $col-white;
         }
-        .members {
-            img {
-                border-radius: 100%;
-                border: 2px solid #121241;
-                &:nth-child(2) {
-                    position: relative;
-                    left: -7px;
-                }
-                &:nth-child(3) {
-                    position: relative;
-                    left: -14px;
-                }
-                &:nth-child(4) {
-                    position: relative;
-                    left: -21px;
-                }
-                &:nth-child(5) {
-                    position: relative;
-                    left: -28px;
-                }
-            }
+    }
+}
+.members {
+    img {
+        border-radius: 100%;
+        border: 2px solid #121241;
+        &:nth-child(2) {
+            position: relative;
+            left: -7px;
+        }
+        &:nth-child(3) {
+            position: relative;
+            left: -14px;
+        }
+        &:nth-child(4) {
+            position: relative;
+            left: -21px;
+        }
+        &:nth-child(5) {
+            position: relative;
+            left: -28px;
         }
     }
 }

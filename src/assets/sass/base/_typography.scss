@@ -61,6 +61,18 @@ h1 {
             background: $col-icon-box;
         }
     }
+    &--4 {
+        border-radius: 12px;
+        border: 1px solid #fff;
+        color: $col-white;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 10px 30px;
+        &:hover {
+            border: 1px solid #fff;
+            color: $col-white;
+        }
+    }
 }
 
 .c {
@@ -72,6 +84,9 @@ h1 {
     }
     &--green {
         color: #01b574 !important;
+    }
+    &--white {
+        color: $col-white;
     }
 }
 

@@ -12,6 +12,7 @@ import Dashboard from "./components/screens/Dashboard";
 import Navbar from "./components/common/Navbar";
 import Tables from "./components/screens/Tables";
 import Billing from "./components/screens/Billing";
+import Profile from "./components/screens/Profile";
 
 function App() {
     const [currentScreen, setCurrentScreen] = useState("Dashboard");
@@ -33,6 +34,7 @@ function App() {
                     {currentScreen === "Dashboard" && <Dashboard />}
                     {currentScreen === "Tables" && <Tables />}
                     {currentScreen === "Billing" && <Billing />}
+                    {currentScreen === "Profile" && <Profile />}
                 </Row>
             </div>
         </>
