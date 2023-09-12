@@ -748,6 +748,195 @@
     }
 }
 
+.card-sign-in,
+.card-sign-up {
+    background: linear-gradient(
+        159deg,
+        #0f123b 14.25%,
+        #090d2e 56.45%,
+        #020515 86.14%
+    );
+    height: 100vh;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $col-white;
+}
+
+.card-sign-in {
+    .wrapper {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(
+            124deg,
+            rgba(255, 255, 255, 0) -22.71%,
+            rgba(255, 255, 255, 0.04) 70.04%
+        );
+        backdrop-filter: blur(21px);
+        border: 2px solid #ffffff56;
+        border-radius: 20px;
+        padding: 50px;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    p {
+        color: $col-gray;
+        font-size: 14px;
+    }
+    form {
+        margin-top: 35px;
+
+        label {
+            margin-bottom: 6px;
+        }
+        input {
+            margin-bottom: 25px;
+        }
+        .form-switch {
+            margin-bottom: 36px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 23px;
+        }
+    }
+    .signup {
+        text-align: center;
+        font-size: 14px;
+        a {
+            color: $col-white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+}
+
+.card-sign-up {
+    .text-wrapper {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 54px;
+        p {
+            max-width: 300px;
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+    }
+    .wrapper {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(
+            124deg,
+            rgba(255, 255, 255, 0) -22.71%,
+            rgba(255, 255, 255, 0.04) 70.04%
+        );
+        backdrop-filter: blur(21px);
+        border: 2px solid #ffffff56;
+        border-radius: 20px;
+        padding: 50px;
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: $col-gray;
+        }
+        .register-options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .option {
+                cursor: pointer;
+                border-radius: 20px;
+                border: 2px solid #ffffff56;
+                background: linear-gradient(
+                    124deg,
+                    rgba(255, 255, 255, 0) -22.38%,
+                    rgba(255, 255, 255, 0.04) 70.38%
+                );
+                backdrop-filter: blur(21px);
+                width: 75px;
+                height: 75px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-right: 0px;
+                }
+                svg {
+                    font-size: 34px;
+                }
+            }
+        }
+        form {
+            label {
+                margin-bottom: 6px;
+            }
+            input {
+                margin-bottom: 24px;
+            }
+            .form-switch {
+                margin-bottom: 36px;
+            }
+            .btn--3 {
+                width: 100%;
+                margin-bottom: 22px;
+                padding: 15px;
+            }
+        }
+        .signin {
+            font-size: 14px;
+            margin-bottom: 0px;
+            a {
+                color: $col-white;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.input--1 {
+    border-radius: 20px;
+    border: 2px solid #ffffff56;
+    background: linear-gradient(
+        117deg,
+        rgba(255, 255, 255, 0) -3.91%,
+        rgba(255, 255, 255, 0.04) 75.27%
+    );
+    backdrop-filter: blur(21px);
+    height: 60px;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: $col-gray;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: $col-gray;
+    }
+}
+
 @media screen and (min-width: $bp-md) {
     .pay-method {
         .inputs {

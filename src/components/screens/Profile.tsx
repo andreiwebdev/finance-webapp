@@ -13,6 +13,7 @@ import Member5 from "../../assets/images/members/member-5.png";
 import ProjectImage1 from "../../assets/images/profile/blog-1.png";
 import ProjectImage2 from "../../assets/images/profile/blog-2.png";
 import ProjectImage3 from "../../assets/images/profile/blog-3.png";
+import SwitchButton from "../common/SwitchButton";
 
 const Profile = () => {
     return (
@@ -92,45 +93,17 @@ const Profile = () => {
                             <div className="card platform-settings">
                                 <h3>Platform Settings</h3>
                                 <div className="label">ACCOUNT</div>
-                                <label className="form-switch">
-                                    <input type="checkbox" />
-                                    <i></i>
-                                    Email me when someone follows me
-                                </label>
-                                <label className="form-switch">
-                                    <input type="checkbox" />
-                                    <i></i>
-                                    Email me when someone answers to...
-                                </label>
-                                <label className="form-switch">
-                                    <input type="checkbox" />
-                                    <i></i>
-                                    Email me when someone mentions me
-                                </label>
+                                <SwitchButton label="Email me when someone follows me" />
+                                <SwitchButton label="Email me when someone follows me" />
+                                <SwitchButton label="Email me when someone follows me" />
 
                                 <div className="mb-4"></div>
 
                                 <div className="label">APPLICATION</div>
-                                <label className="form-switch">
-                                    <input type="checkbox" />
-                                    <i></i>
-                                    Email me when someone answers to...
-                                </label>
-                                <label className="form-switch">
-                                    <input type="checkbox" />
-                                    <i></i>
-                                    Email me when someone answers to...
-                                </label>
-                                <label className="form-switch">
-                                    <input type="checkbox" />
-                                    <i></i>
-                                    Email me when someone follows me
-                                </label>
-                                <label className="form-switch">
-                                    <input type="checkbox" />
-                                    <i></i>
-                                    Email me when someone mentions me
-                                </label>
+                                <SwitchButton label="Email me when someone follows me" />
+                                <SwitchButton label="Email me when someone follows me" />
+                                <SwitchButton label="Email me when someone follows me" />
+                                <SwitchButton label="Email me when someone follows me" />
                             </div>
                         </Col>
                     </Row>

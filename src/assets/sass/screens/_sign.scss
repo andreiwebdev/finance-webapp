@@ -1,0 +1,25 @@
+.sign-bg {
+    background-image: url("../images/bg-image-4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $col-white;
+    h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    h2 {
+        background: linear-gradient(95deg, #fff 79.99%, #21242f 102.65%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 36px;
+        font-weight: 700;
+    }
+    padding: 16px;
+}
